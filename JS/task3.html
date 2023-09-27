@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 3</title>
+    <style>
+        .inpbutton
+        {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+        #result
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: block; margin-left:auto; margin-right: auto; text-align: center;justify-content: center;">JS Task 3</h1>
+
+    <div class="inpbutton">
+        <form>
+            1st Number : <input type="number" id="firstNumber" /><br><br>
+            2nd Number: <input type="number" id="secondNumber" /><br><br>
+            <input type="button" onClick="multiply()" Value="Multiply" />
+            <input type="button" onClick="divide()" Value="Divide" />
+            </form>
+
+    </div>
+    
+
+    <p id="result"></p>
+
+    <script>
+
+        function multiply()
+        {
+            let num1 = document.getElementById('firstNumber').value;
+            let num2 = document.getElementById('secondNumber').value;
+            let ans = num1*num2;
+
+            document.getElementById('result').textContent = `The Product is: ${ans}`;
+
+        }
+
+        function divide()
+        {
+            let num1 = document.getElementById('firstNumber').value;
+            let num2 = document.getElementById('secondNumber').value;
+            let ans = num1/num2;
+
+            document.getElementById('result').textContent = `The Quotient is: ${ans}`;
+
+
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

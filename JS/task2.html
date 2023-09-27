@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 2</title>
+    <style>
+        .inpbutton
+        {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+        #result
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: block; margin-left:auto; margin-right: auto; text-align: center;justify-content: center;">JS Task 2</h1>
+
+    <h3 style="display: block; margin-left:auto; margin-right: auto; text-align: center;justify-content: center;">Enter the string to sort:</h3>
+
+    <div class="inpbutton">
+
+        <input type="text" id="input" placeholder="Enter a valid string">
+        <button type="submit" id="subbutton" onclick="sortstr()">Submit</button>
+
+    </div>
+
+    <p id="result"></p>
+
+    <script>
+
+        function sortstr()
+        {
+            let s = document.getElementById("input").value;
+            let sarray = s.split('');
+            sarray.sort();
+            let sorteds = sarray.join('');
+            
+            document.getElementById('result').textContent = `Sorted String: ${sorteds}`;
+        }
+
+    </script>
+
+    
+</body>
+</html>
